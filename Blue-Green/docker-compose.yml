@@ -1,0 +1,15 @@
+services:
+  blue:
+    build: ./blue
+
+  green:
+    build: ./green
+
+  nginx:
+    build: ./nginx
+    ports:
+      - "80:80"
+
+    depends_on: 
+      - blue
+      - green
