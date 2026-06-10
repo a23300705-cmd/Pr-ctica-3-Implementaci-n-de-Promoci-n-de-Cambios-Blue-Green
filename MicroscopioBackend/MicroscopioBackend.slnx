@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="MicroscopioBackend.Tests/MicroscopioBackend.Tests.csproj" />
+  <Project Path="MicroscopioBackend/MicroscopioBackend.csproj" />
+</Solution>

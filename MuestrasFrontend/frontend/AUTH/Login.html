@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar sesión — Zoom Explorer</title>
+  <link rel="stylesheet" href="Login.css">
+</head>
+<body>
+
+<div class="auth-wrap">
+
+  <div class="auth-panel">
+    <div class="auth-card">
+
+      <div class="auth-logo">
+        <img src="../Assets/imglogo.png" alt="Zoom Explorer">
+      </div>
+
+      <div class="auth-heading">
+        <h1 class="auth-titulo">Bienvenido <em>de vuelta</em></h1>
+        <h2 class="auth-subtitulo">Accede a tu cuenta para continuar explorando</h2>
+      </div>
+
+      <div class="auth-error" id="auth-error">
+        <h2 class="auth-error-msg" id="auth-error-msg"></h2>
+      </div>
+
+      <div class="auth-form">
+
+        <div class="campo">
+          <h2 class="campo-label">Correo electrónico</h2>
+          <input type="email" id="email" placeholder="tu@correo.com" autocomplete="email">
+        </div>
+
+        <div class="campo">
+          <h2 class="campo-label">Contraseña</h2>
+          <div class="campo-input-wrap">
+            <input type="password" id="password" placeholder="••••••••" autocomplete="current-password">
+            <button class="toggle-pass" type="button" onclick="togglePassword('password', this)" aria-label="Mostrar contraseña">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <button class="btn-auth" onclick="loginEmail()">Iniciar Sesión</button>
+
+      </div>
+
+      <div class="separador"><span>o continúa con</span></div>
+
+      <div id="btn-google-container"></div>
+
+      <div class="enlace-auth">
+        <h2 class="enlace-auth-texto">¿No tienes cuenta? <a href="Register.html">Crear cuenta</a></h2>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── IMAGEN (derecha) ── -->
+  <div class="auth-img">
+    <img src="../Assets/imglog.png" alt="Laboratorio">
+    <div class="auth-img-overlay">
+      <span class="auth-img-badge">
+        <svg width="8" height="8" viewBox="0 0 8 8" fill="currentColor"><circle cx="4" cy="4" r="4"/></svg>
+        Comunidad científica
+      </span>
+      <p class="auth-img-title">Divulgación Científica</p>
+      <p class="auth-img-text">Explora muestras microscópicas desde cualquier dispositivo.</p>
+    </div>
+  </div>
+
+</div>
+
+<script src="https://accounts.google.com/gsi/client"></script>
+<script src="Auth.js"></script>
+</body>
+</html>

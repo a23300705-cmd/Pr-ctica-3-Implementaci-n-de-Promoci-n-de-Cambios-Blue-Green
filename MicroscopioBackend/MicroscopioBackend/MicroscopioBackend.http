@@ -1,0 +1,6 @@
+@MicroscopioBackend_HostAddress = http://localhost:5174
+
+GET {{MicroscopioBackend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
